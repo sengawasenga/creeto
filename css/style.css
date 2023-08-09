@@ -1,0 +1,297 @@
+/* hey welcome to this awesome web view of the Creeto company, my name is Marcel and I'm proud that this site pleased you  */
+
+/* global styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    background: #030305;
+    color: #FDFDFD;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    overflow-x: hidden;
+}
+
+img.cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* the navbar styles */
+nav li {
+    list-style: none;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15%;
+}
+
+.logo {
+    height: 60px;
+}
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.links a {
+    opacity: .6;
+    transition: .3s ease;
+}
+.links a.active {
+    opacity: 1;
+}
+
+.links a:hover {
+    opacity: .9;
+}
+
+.profile {
+    padding: 5px 8px;
+    border-radius: 30px;
+    border: 1px solid #fdfdfd7a;
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.profile img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* the head style */
+
+.custom-star {
+    position: absolute;
+    top: 0;
+    left: 15%;
+    color: #D9272D;
+    font-size: 1rem;
+}
+
+.head {
+    padding: 40px 15%;
+    position: relative;
+}
+
+.head .custom-star {
+    color: #D9272D;
+    font-size: 2rem;
+    top: 40px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.small_title {
+    font-weight: 400;
+    opacity: .8;
+    margin-bottom: 1.6rem;
+}
+
+.main_title {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 800;
+    position: relative;
+}
+
+.red {
+    color: #D9272D;
+}
+
+.header_images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.header_images::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #D9272D;
+    border-radius: 200%;
+    transform: rotate(-15deg);
+}
+
+.head .header_images .custom-star {
+    left: unset;
+    right: -20px;
+    top: 50%;
+    color: #FDFDFD;
+}
+
+.img-card {
+    height: 400px;
+    max-width: 400px;
+    min-width: 250px;
+    border-radius: 25px;
+    padding: 2px;
+    position: relative;
+    border: 2px solid rgba(253, 253, 253, 1);
+}
+
+.img-card.card-1 {
+    background: linear-gradient(to bottom, #3E4E5A, #8795A1);
+}
+
+.img-card.card-2 {
+    background: linear-gradient(to bottom, #1E2325, #2D3536);
+}
+
+.img-card.card-3 {
+    background: linear-gradient(to bottom, #0F1719, #283F39);
+}
+
+.bottom_content {
+    position: relative;
+    padding: 20px 15%;
+}
+
+.bottom_content .header {
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card_content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    gap: 20px;
+    background: rgba(253, 253, 253, 0.1);
+    border: 1px solid rgba(253, 253, 253, 0.2);
+    margin-bottom: 1rem;
+}
+
+.btn_core {
+    display: inline-block;
+    border: 1px solid rgba(253, 253, 253, 0.4);
+    background: transparent;
+    border-radius: 30px;
+    padding: 8px 30px;
+    transition: .3s ease;
+    cursor: pointer;
+    color: inherit;
+}
+
+.btn_core:hover, .nav_button:hover {
+    background: rgba(253, 253, 253, 0.1);
+}
+
+.text-small {
+    font-size: .8rem;
+}
+
+.pagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.nav_button {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .3s ease;
+    font-size: .8rem;
+    border: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.nav_button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+}
+
+.nav_utilities {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 1090px) {
+    .burger {
+        display: inline-block;
+        position: relative;
+        z-index: 100;
+    }
+
+    .navbar .links {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #2d2d35;
+        border-right: 1px solid rgba(253, 253, 253, 0.1);
+        width: 250px;
+        height: 100%;
+        transform: translateX(100%);
+        z-index: 40;
+        transition: .2s ease-in-out;
+    }
+
+    .navbar .links ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .navbar .links.active {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main_title {
+        font-size: 1.5rem;
+    }
+}
